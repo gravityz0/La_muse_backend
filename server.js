@@ -6,12 +6,13 @@ require('dotenv').config()
 
 const app = express()
 
-app.use(cors())
+app.use(cors(
+    {
+    origin: 'https://la-muse.onrender.com'
+}
+))
 app.use(bodyParser.json())
 
-app.get('/',(req,res)=>{
-    res.send("Welcome to home page")
-})
 
 app.post('/send',async(req,res)=>{
     const {fullName, email, phoneNumber, emailSubject,message} = req.body;
