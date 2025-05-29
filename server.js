@@ -24,6 +24,7 @@ app.post('/send',async(req,res)=>{
             html: `
             <h2>Received message from La muse</h2>
             <p><strong>Names</strong>: ${fullName}</p>
+            <p><strong>Email</strong>: ${email}</p>
             <p><strong>Phone Number</strong>: ${phoneNumber}</p>
             <p><strong>Message</strong>: ${message}</p>
             `
